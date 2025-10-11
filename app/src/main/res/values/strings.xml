@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Calculator</string>
+    <string name="settings">Settings</string>
+    <string name="theme">Theme</string>
+    <string name="light">Light</string>
+    <string name="dark">Dark</string>
+    <string name="output_font_size">Output Font Size</string>
+    <string name="output_color">Output Color</string>
+    <string name="save_settings">Save Settings</string>
+    <string name="settings_saved">Settings saved successfully</string>
+    <string name="reset_calculator">Reset Calculator</string>
+    <string name="reset_confirmation">Are you sure you want to reset?</string>
+    <string name="yes">Yes</string>
+    <string name="cancel">Cancel</string>
+    <string name="error">Error</string>
+    <string name="ok">OK</string>
+    <string name="divide_by_zero">Cannot divide by zero</string>
+    <string name="negative_sqrt">Cannot calculate square root of negative number</string>
+    <string name="setting">Settings</string>
+</resources>
