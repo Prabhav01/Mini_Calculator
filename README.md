@@ -7,7 +7,7 @@ Group Number: 7
 
 # Project Overview
 
-A fully-featured calculator Android application with customizable themes, font sizes, and colors. This app demonstrates proper Android development practices including activity lifecycle management, persistent storage with SharedPreferences, and responsive UI design.
+A fully-featured calculator Android application with customizable themes, font sizes, and colors.
 
 # Group Contribution
 
