@@ -80,15 +80,14 @@ class MainActivity : AppCompatActivity() {
 
     override fun onStop() {
         super.onStop()
-        if (!isChangingConfigurations && !isFinishing) {
-            softReset()
-        }
+        // spec: reset to zero when app becomes invisible
+        softReset()
     }
 
     private fun onDigit(s: String) {
         if (e) { input = "0"; e = false }
-        val beforeDecimal = input.split('.')[0].replace("-", "")
-        if (beforeDecimal.length >= 5 && input != "0") {
+        val count = input.count { it.isDigit() }
+        if (count >= 5 && input != "0") {
             Toast.makeText(this, "Max 5 digits", Toast.LENGTH_SHORT).show()
             return
         }
@@ -150,7 +149,7 @@ class MainActivity : AppCompatActivity() {
             .setTitle("Reset")
             .setMessage("Clear the current value?")
             .setPositiveButton("Yes") { _, _ -> softReset() }
-            .setNegativeButton("Cancel", null)
+            .setNegativeButton("No", null)
             .show()
     }
 

@@ -29,16 +29,6 @@ class SettingsActivity : AppCompatActivity() {
         fontSpin.setSelection(fontOpts.indexOf(prefs.getString("fontSize","Medium")))
         colorSpin.setSelection(colorOpts.indexOf(prefs.getString("colorChoice","Accent")))
 
-        radioLight.setOnClickListener {
-            radioLight.isChecked = true
-            radioDark.isChecked = false
-        }
-
-        radioDark.setOnClickListener {
-            radioDark.isChecked = true
-            radioLight.isChecked = false
-        }
-
         saveBtn.setOnClickListener {
             val themePref = if (radioDark.isChecked) "Dark" else "Light"
             val fontPref = fontSpin.selectedItem?.toString() ?: "Medium"
