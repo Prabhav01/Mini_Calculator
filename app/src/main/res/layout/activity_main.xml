@@ -8,6 +8,7 @@
     android:background="?attr/backgroundColor"
     tools:context=".MainActivity">
 
+    <!-- HEADER with title, display, and SETTINGS ICON -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -25,22 +26,11 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <ImageView
-            android:id="@+id/settingsIcon"
-            android:layout_width="31dp"
-            android:layout_height="29dp"
-            android:clickable="true"
-            android:contentDescription="@string/setting"
-            android:focusable="true"
-            android:src="@drawable/settings_24"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:tint="?attr/textColor" />
-
+        <!-- Display: constraint-sized so it doesn’t cover the gear -->
         <TextView
             android:id="@+id/display"
-            android:layout_width="376dp"
-            android:layout_height="119dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             android:ellipsize="end"
             android:gravity="end"
             android:maxLines="1"
@@ -50,13 +40,29 @@
             android:text="0"
             android:textColor="?attr/textColor"
             android:textSize="48sp"
+            app:layout_constraintTop_toBottomOf="@id/appTitle"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/appTitle" />
+            app:layout_constraintEnd_toStartOf="@id/settingsIcon" />
 
+        <!-- Gear -->
+        <ImageView
+            android:id="@+id/settingsIcon"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="8dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@drawable/settings_24"
+            android:contentDescription="@string/setting"
+            app:tint="?attr/textColor"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:elevation="12dp" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <!-- KEYPAD -->
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -333,7 +339,5 @@
             android:text="="
             android:textColor="@color/dark_background"
             android:textSize="20sp" />
-
     </GridLayout>
-
 </LinearLayout>
