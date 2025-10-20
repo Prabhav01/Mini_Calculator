@@ -27,33 +27,35 @@
 
         <ImageView
             android:id="@+id/settingsIcon"
-            android:layout_width="31dp"
-            android:layout_height="29dp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="4dp"
             android:clickable="true"
-            android:contentDescription="@string/setting"
             android:focusable="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:contentDescription="@string/setting"
             android:src="@drawable/settings_24"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="@id/appTitle"
             app:tint="?attr/textColor" />
 
         <TextView
             android:id="@+id/display"
-            android:layout_width="376dp"
-            android:layout_height="119dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             android:ellipsize="end"
-            android:gravity="end"
+            android:gravity="end|center_vertical"
             android:maxLines="1"
-            android:paddingStart="8dp"
-            android:paddingTop="24dp"
-            android:paddingEnd="8dp"
+            android:padding="16dp"
             android:text="0"
             android:textColor="?attr/textColor"
             android:textSize="48sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/appTitle" />
+            app:layout_constraintTop_toBottomOf="@id/appTitle"
+            android:layout_marginTop="8dp" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
