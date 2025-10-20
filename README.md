@@ -7,7 +7,7 @@ Group Number: 7
 
 # Project Overview
 
-A fully-featured calculator Android application with customizable themes, font sizes, and colors.
+A fully-featured calculator Android application with customizable themes and a settings tab.
 
 # Group Contribution
 
