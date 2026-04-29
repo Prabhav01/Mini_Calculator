@@ -1,9 +1,4 @@
-# Calculator Android App - Midterm Project
-Course: CSCI-C 323: Mobile App Development
-
-Semester: Fall 2025
-
-Group Number: 7
+# Calculator Android App
 
 # Project Overview
 
